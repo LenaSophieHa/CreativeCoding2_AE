@@ -1,0 +1,36 @@
+<!doctype html> 
+<html lang="de"> 
+<head>
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1"> 
+  <title>Fireworks</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <script type="module" src="script.js" defer></script> 
+</head>
+
+<body>
+  <h1>Feuerwerks Editor</h1> 
+
+  <div id="ui"> 
+    <label>Farbe
+      <input id="h" type="range" min="0" max="360" value="40"> <!-- Slider für Farbton (Hue) -->
+      <span id="sw"></span> <!-- Farb-Vorschau -->
+    </label>
+
+    <label>Größe
+      <input id="s" type="range" min="1" max="6" value="3"> <!-- Slider für Größe der Partikel -->
+    </label>
+
+    <button id="m" type="button">Music: Off</button> <!-- Schaltet Web Audio ein/aus -->
+    <button id="clr" type="button">Clear</button> <!-- Löscht alle Feuerwerke -->
+
+    <span id="info"></span> <!-- Zeigt Client-ID und Anzahl verbundener Nutzer -->
+  </div>
+
+  <canvas id="c"></canvas> 
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,84 @@
+html,body{ 
+  margin:0; /* Entfernt Standardabstände des Browsers */
+  height:100%; /* HTML und Body füllen das Fenster */
+  background: url("Nachthimmel.jpg") center / cover no-repeat fixed; /* Hintergrundbild */
+  color:#fff; /* Standard-Textfarbe weiß */
+  font:14px system-ui; /* Systemschrift für saubere UI */
+  overscroll-behavior:none; /* Verhindert Gummiband-Scroll auf Mobile */
+  touch-action:none; /* Deaktiviert Browser-Gesten für Canvas */
+}
+
+body.disconnected{ /* Zustand bei Verbindungsfehler */
+  opacity:0.333; /* Seite wird ausgegraut */
+}
+
+h1{ /* Haupttitel */
+  position:fixed; /* Titel bleibt immer sichtbar */
+  top:20px; /* Abstand von oben */
+  right:20px; /* Position rechts */
+  margin:0; /* Außenabstand */
+  font-size:25px; /* Schriftgröße */
+  font-weight:500; /* Schriftstärke */
+  opacity:.85; /* transparenz */
+  color:lightblue; /* Hellblaue Schrift */
+  pointer-events:none; /* Blockiert keine Touch-Interaktionen */
+}
+
+#ui{ /* Container für die Benutzeroberfläche */
+  position:fixed; /* UI bleibt immer sichtbar */
+  top:10px; /* Abstand von oben */
+  left:10px; /* Abstand von links */
+  display:flex; /* Flexbox-Layout */
+  gap:10px; /* Abstand zwischen Elementen */
+  align-items:center; /* Vertikale Ausrichtung */
+  padding:8px; /* Innenabstand */
+  background:rgba(0,0,0,.35); /* Transparenter Hintergrund */
+  border-radius:10px; /* Abgerundete Ecken */
+  flex-wrap:wrap; /* Umbruch auf kleinen Displays */
+  max-width:calc(100vw - 20px); /* Verhindert Überlaufen */
+}
+
+label{ /* Label für Inputs */
+  display:flex; /* Flexbox für Text + Slider */
+  gap:6px; /* Abstand zwischen Inhalt */
+  align-items:center; /* Saubere Ausrichtung von Text und Slider */
+}
+
+input[type="range"]{ /* Slider */
+  width:130px; /* Feste Breite */
+  accent-color:lightblue; /* Einheitliche Slider-Farbe */
+}
+
+#sw{ /* Status-Anzeige (z.B. Verbindung) */
+  width:16px; /* Breite */
+  height:16px; /* Höhe */
+  border-radius:50%; /* Kreisform */
+  border:1px solid rgba(255,255,255,.4); /* Heller Rand */
+}
+
+button{ /* Alle Buttons */
+  border:0; /* Kein Standardrahmen */
+  padding:6px 10px; /* Innenabstand */
+  border-radius:10px; /* Abgerundete Ecken */
+  background:rgba(255,255,255,.12); /* Halbtransparenter Hintergrund */
+  color:#fff; /* Textfarbe weiß */
+  cursor:pointer; /* Mauszeiger als Hand */
+}
+
+button:active{ /* Beim Klicken */
+  transform:translateY(1px); /* Kleines Klick-Feedback */
+}
+
+#info{ /* Infotext */
+  opacity:.85; /* Leicht transparent */
+  font-size:12px; /* Kleine Schrift */
+  margin-left:8px; /* Abstand nach links */
+  user-select:none; /* Text nicht auswählbar */
+}
+
+canvas{ /* Zeichenfläche */
+  width:100vw; /* Volle Bildschirmbreite */
+  height:100vh; /* Volle Bildschirmhöhe */
+  display:block; /* Entfernt Inline-Abstände */
+}
+
